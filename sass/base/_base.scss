@@ -1,0 +1,85 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+body {
+  color: getColor("primary-color");
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-size: rem(14);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+address {
+  font-style: normal;
+  width: max-content;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+button {
+  font-family: "Roboto", sans-serif;
+  border: 0;
+}
+
+.container {
+  min-width: rem(320);
+  max-width: rem(767);
+  padding: 0 rem(15);
+  margin: 0 auto;
+}
+.section {
+  padding-top: rem(60);
+  padding-bottom: rem(60);
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    max-width: rem(1199);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    // width: rem(1200);
+    max-width: rem(1600);
+    // padding: 0 rem(215);
+  }
+  .section {
+    padding-top: rem(94);
+    padding-bottom: rem(94);
+  }
+}

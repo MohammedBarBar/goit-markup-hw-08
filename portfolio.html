@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="container header">
+        <nav class="header__nav">
+          <a href="index.html" class="header__logo">WebStudio</a>
+          <ul class="header__links">
+            <li class="header__content">
+              <a href="index.html" class="header__link">Studio</a>
+            </li>
+            <li class="header__content">
+              <a
+                href="portfolio.html"
+                class="header__link header__link--current"
+                >Portfolio</a
+              >
+            </li>
+            <li class="header__content">
+              <a href="#" class="header__link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="header__our-contacts">
+          <li class="header__info-contacts">
+            <a href="mailto:info@devstudio.com" class="header__info-link">
+              <svg class="header__right-icon" width="16" height="12">
+                <use href="./images/icons.svg#envelope"></use>
+              </svg>
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="header__info-contacts">
+            <a href="tel:+38 096 111 11 11" class="header__info-link">
+              <svg class="header__right-icon" width="10" height="16">
+                <use href="./images/icons.svg#smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+        <ul class="header__social-media">
+          <li class="header__media">
+            <a href="#" class="header__media-link">Instagram</a>
+          </li>
+          <li class="header__media">
+            <a href="#" class="header__media-link">Twitter</a>
+          </li>
+          <li class="header__media">
+            <a href="#" class="header__media-link">Facebook</a>
+          </li>
+          <li class="header__media">
+            <a href="#" class="header__media-link">LinkedIn</a>
+          </li>
+        </ul>
+        <div class="header__hamburger">
+          <span class="header__bar"></span>
+          <span class="header__bar"></span>
+          <span class="header__bar"></span>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section">
+        <div class="container">
+          <ul class="search-buttons">
+            <li class="serach-buttons__item">
+              <button
+                type="button"
+                class="search-buttons__content serach-buttons__content--active"
+              >
+                All
+              </button>
+            </li>
+            <li class="serach-buttons__item">
+              <button type="button" class="search-buttons__content">
+                Web-sites
+              </button>
+            </li>
+            <li class="serach-buttons__item">
+              <button
+                type="button"
+                class="search-buttons__content search-buttons__apps"
+              >
+                Apps
+              </button>
+            </li>
+            <li class="serach-buttons__item">
+              <button type="button" class="search-buttons__content">
+                Design
+              </button>
+            </li>
+            <li class="serach-buttons__item">
+              <button type="button" class="search-buttons__content">
+                Marketing
+              </button>
+            </li>
+          </ul>
+
+          <ul class="content">
+            <li class="content__item">
+              <a href="/" class="content__link">
+                <div class="content__box">
+                  <div class="content__hover">
+                    <p class="content__description">
+                      Technoduck is a state-of-the-art coronavirus distribution
+                      platform. Companies use this platform for digital
+                      espionage and attacks on competitors' secure servers.
+                    </p>
+                  </div>
+                  <img
+                    src="images/portfolio/img1.jpg"
+                    alt="image Web-site"
+                    class="content__image"
+                    width="370px"
+                  />
+                </div>
+                <div class="content__details">
+                  <h3 class="content__topic">Technoduck</h3>
+                  <p class="content__type">Web-site</p>
+                </div>
+              </a>
+            </li>
+            <li class="content__item">
+              <a href="/" class="content__link">
+                <div class="content__box">
+                  <div class="content__hover">
+                    <p class="content__description">
+                      Poster New Orlean vs Golden Star Poster New Orlean vs
+                      Golden Star
+                    </p>
+                  </div>
+                  <img
+                    src="images/portfolio/basketball.jpg"
+                    alt="image Poster"
+                    class="content__image"
+                    width="370px"
+                  />
+                </div>
+
+                <div class="content__details">
+                  <h3 class="content__topic">
+                    Poster New Orlean vs Golden Star
+                  </h3>
+                  <p class="content__type">Design</p>
+                </div>
+              </a>
+            </li>
+            <li class="content__item">
+              <a href="/" class="content__link">
+                <div class="content__box">
+                  <div class="content__hover">
+                    <p class="content__description">
+                      Seafood Restaurant Seafood Restaurant Seafood Restaurant
+                      Seafood Restaurant
+                    </p>
+                  </div>
+                  <img
+                    src="images/portfolio/seafood.jpg"
+                    alt="image Seafood Restaurant "
+                    class="content__image"
+                    width="370px"
+                  />
+                </div>
+
+                <div class="content__details">
+                  <h3 class="content__topic">Seafood Restaurant</h3>
+                  <p class="content__type">Apps</p>
+                </div>
+              </a>
+            </li>
+            <li class="content__item">
+              <a href="/" class="content__link">
+                <div class="content__box">
+                  <div class="content__hover">
+                    <p class="content__description">
+                      Project Prime Project Prime Project Prime Project Prime
+                      Project Prime
+                    </p>
+                  </div>
+                  <img
+                    src="images/portfolio/prime.jpg"
+                    alt="image Project Prime"
+                    class="content__image"
+                    width="370px"
+                  />
+                </div>
+
+                <div class="content__details">
+                  <h3 class="content__topic">Project Prime</h3>
+                  <p class="content__type">Marketing</p>
+                </div>
+              </a>
+            </li>
+            <li class="content__item">
+              <a href="/" class="content__link">
+                <div class="content__box">
+                  <div class="content__hover">
+                    <p class="content__description">
+                      Project Boxes Project Boxes Project Boxes Project Boxes
+                    </p>
+                  </div>
+                  <img
+                    src="images/portfolio/boxes.jpg"
+                    alt="image Project Boxes"
+                    class="content__image"
+                    width="370px"
+                  />
+                </div>
+
+                <div class="content__details">
+                  <h3 class="content__topic">Project Boxes</h3>
+                  <p class="content__type">Apps</p>
+                </div>
+              </a>
+            </li>
+            <li class="content__item">
+              <a href="/" class="content__link">
+                <div class="content__box">
+                  <div class="content__hover">
+                    <p class="content__description">
+                      Inspiration has no Borders Inspiration has no Borders
+                      Inspiration has no Borders
+                    </p>
+                  </div>
+                  <img
+                    src="images/portfolio/website.jpg"
+                    alt="image Web-site"
+                    class="content__image"
+                    width="370px"
+                  />
+                </div>
+
+                <div class="content__details">
+                  <h3 class="content__topic">Inspiration has no Borders</h3>
+                  <p class="content__type">Web-site</p>
+                </div>
+              </a>
+            </li>
+            <li class="content__item">
+              <a href="/" class="content__link">
+                <div class="content__box">
+                  <div class="content__hover">
+                    <p class="content__description">
+                      Limited Edition Limited Edition Limited Edition Limited
+                      Edition
+                    </p>
+                  </div>
+                  <img
+                    src="images/portfolio/design.jpg"
+                    alt="image Design"
+                    class="content__image"
+                    width="370px"
+                  />
+                </div>
+
+                <div class="content__details">
+                  <h3 class="content__topic">Limited Edition</h3>
+                  <p class="content__type">Design</p>
+                </div>
+              </a>
+            </li>
+            <li class="content__item">
+              <a href="/" class="content__link">
+                <div class="content__box">
+                  <div class="content__hover">
+                    <p class="content__description">
+                      Project LAB Project LAB Project LAB Project LAB Project
+                      LAB
+                    </p>
+                  </div>
+                  <img
+                    src="images/portfolio/lab.jpg"
+                    alt="image Project LAB"
+                    class="content__image"
+                    width="370px"
+                  />
+                </div>
+
+                <div class="content__details">
+                  <h3 class="content__topic">Project LAB</h3>
+                  <p class="content__type">Marketing</p>
+                </div>
+              </a>
+            </li>
+            <li class="content__item">
+              <a href="/" class="content__link">
+                <div class="content__box">
+                  <div class="content__hover">
+                    <p class="content__description">
+                      Growing App Growing App Growing App Growing App
+                    </p>
+                  </div>
+                  <img
+                    src="images/portfolio/growing app.jpg"
+                    alt="image Growing App"
+                    class="content__image"
+                    width="370px"
+                  />
+                </div>
+
+                <div class="content__details">
+                  <h3 class="content__topic">Growing App</h3>
+                  <p class="content__type">Apps</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container footer">
+        <div class="footer__box1">
+          <a
+            href="index.html"
+            class="footer__logo header__logo"
+            style="margin-bottom: 10px; display: block"
+            >WebStudio</a
+          >
+
+          <address>
+            <ul class="footer__address">
+              <li>
+                <a href="#" class="footer__address-link"
+                  >695 Park Ave, New York, NY 10065,<br />
+                  United States</a
+                >
+              </li>
+              <li>
+                <a href="mailto:info@example.com" class="footer__address-link"
+                  >info@example.com</a
+                >
+              </li>
+              <li>
+                <a href="tel:+1 212-772-4150" class="footer__address-link"
+                  >+1 212-772-4150</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="footer__box2">
+          <h3 class="footer__box2-title">Find us on</h3>
+          <ul class="footer__social-icons">
+            <li class="footer__icons-list">
+              <a href="/" class="footer__icon">
+                <svg width="20" height="20" class="footer__icon-color">
+                  <use href="./images/icons.svg#instgram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__icons-list">
+              <a href="/" class="footer__icon">
+                <svg width="20" height="20" class="footer__icon-color">
+                  <use href="./images/icons.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__icons-list">
+              <a href="/" class="footer__icon">
+                <svg width="20" height="20" class="footer__icon-color">
+                  <use href="./images/icons.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__icons-list">
+              <a href="/" class="footer__icon">
+                <svg width="20" height="20" class="footer__icon-color">
+                  <use href="./images/icons.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__box3">
+          <h3 class="footer__box2-title">Subscribe to the newsletter</h3>
+          <form action="" class="footer__box3-form">
+            <input
+              type="email"
+              name="email-address"
+              class="footer__email"
+              placeholder="E-mail"
+            />
+            <button type="submit" class="footer__email-button">
+              Suscribe
+              <!-- <div class="email-button-group"> -->
+              <!-- <h2 class="email-button-text">Suscribe</h2> -->
+              <svg width="24" height="24" class="footer__button-icon">
+                <use href="./images/icons.svg#email-suscribe"></use>
+              </svg>
+              <!-- </div> -->
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/mobile.menu.js"></script>
+  </body>
+</html>

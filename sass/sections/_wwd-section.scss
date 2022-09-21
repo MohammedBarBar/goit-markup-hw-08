@@ -1,0 +1,36 @@
+.wwd {
+  padding-top: rem(0);
+  content-visibility: hidden;
+  padding-bottom: rem(0);
+}
+.wwd__title {
+  @include title-sections;
+}
+.wwd__list {
+  // display: flex;
+  @include flex(center, center);
+}
+.wwd__content {
+  position: relative;
+  &:not(:last-child) {
+    margin-right: rem(30);
+  }
+}
+.wwd__details {
+  @include font-custome(700, 14, 16, 0.03);
+  text-align: center;
+  text-transform: uppercase;
+  color: getColor("white-color");
+  margin: 0;
+  padding: rem(27);
+  position: absolute;
+  background: getColor("img-background");
+  width: 100%;
+  bottom: 0;
+}
+@media screen and (min-width: 1200px) {
+  .wwd {
+    content-visibility: visible;
+    padding-bottom: rem(94);
+  }
+}

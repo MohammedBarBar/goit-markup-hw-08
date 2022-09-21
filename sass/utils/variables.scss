@@ -1,0 +1,45 @@
+@function rem($value) {
+  $remValue: calc($value / 16) + rem;
+  @return $remValue;
+}
+
+$colors: (
+  "primary-color": #212121,
+  "background": #2f303a,
+  "accent-color": #2196f3,
+  "pargraph-color": #757575,
+  "white-color": #ffffff,
+  "section-background": #f5f4fa,
+  "button-hover": rgba(33, 150, 243, 0.8),
+  "footer-link": rgb(255, 255, 255, 0.6),
+  "border-card": #eeeeee,
+  "hero-background": rgba(47, 48, 58, 0.4),
+  "img-background": rgba(47, 48, 58, 0.8),
+  "icons-border": #afb1b8,
+  "black-color": black,
+  "button-hero-hover": #188ce8,
+  "border-header": #ececec,
+  "overlay-model": rgba(0, 0, 0, 0.2),
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+
+@mixin flex($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+@mixin font-custome($weight, $size, $height, $spacing) {
+  font-weight: $weight;
+  font-size: rem($size);
+  line-height: rem($height);
+  letter-spacing: $spacing + em;
+}
+
+@mixin title-sections {
+  @include font-custome(700, 36, 42, 0.03);
+  text-align: center;
+  margin-bottom: rem(50);
+}

@@ -1,0 +1,58 @@
+.search-buttons {
+  @include flex(center, flex-start);
+  // margin-bottom: rem(50);
+  flex-wrap: wrap;
+  margin-bottom: rem(40);
+}
+.serach-buttons__item:not(:last-child) {
+  margin-right: rem(8);
+  margin-bottom: rem(15);
+}
+.search-buttons__content {
+  background: getColor("section-background");
+  border: none;
+  text-align: center;
+  @include font-custome(500, 16, 26, 0.03);
+  padding: rem(6) rem(26);
+  border-radius: rem(4);
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: getColor("accent-color");
+    color: getColor("white-color");
+    box-shadow: rem(0) rem(3) rem(1) rgba(0, 0, 0, 0.1),
+      rem(0) rem(1) rem(2) rgba(0, 0, 0, 0.08),
+      rem(0) rem(2) rem(2) rgba(0, 0, 0, 0.12);
+    outline: none;
+    cursor: pointer;
+  }
+}
+.search-buttons__apps {
+  padding: rem(6) rem(53);
+}
+
+.serach-buttons__content--active {
+  background-color: getColor("accent-color");
+  color: getColor("white-color");
+  box-shadow: rem(0) rem(3) rem(1) rgba(0, 0, 0, 0.1),
+    rem(0) rem(1) rem(2) rgba(0, 0, 0, 0.08),
+    rem(0) rem(2) rem(2) rgba(0, 0, 0, 0.12);
+}
+@media (min-width: 768px) {
+  .search-buttons {
+    // flex-wrap: wrap;
+    margin-bottom: rem(30);
+    justify-content: center;
+  }
+  .serach-buttons__item:not(:last-child) {
+    margin-right: rem(8);
+    margin-bottom: rem(0);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .search-buttons {
+    margin-bottom: rem(50);
+  }
+}

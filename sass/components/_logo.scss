@@ -1,0 +1,11 @@
+.header__logo {
+  font-family: "Raleway", sans-serif;
+  @include font-custome(700, 26, 31, 0.03);
+  margin-right: rem(97);
+  color: getColor("accent-color");
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .header__logo {
+    margin-right: rem(88);
+  }
+}

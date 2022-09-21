@@ -1,0 +1,197 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: getColor(overlay-model);
+  @include flex(center, center);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  z-index: 1;
+  padding: rem(0);
+  &.is-hidden {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: fill;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__content {
+    background: getColor("white-color");
+    box-shadow: rem(0) rem(1) rem(3) rgba(0, 0, 0, 0.12),
+      rem(0) rem(1) rem(1) rgba(0, 0, 0, 0.14),
+      rem(0) rem(2) rem(1) rgba(0, 0, 0, 0.2);
+    border-radius: rem(4);
+    margin: auto;
+    position: relative;
+    padding: rem(40);
+  }
+  &__close-icon {
+    background: getColor("white-color");
+    border: rem(1) solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    position: absolute;
+    top: rem(8);
+    right: rem(8);
+    padding: 0;
+    color: getColor("black-color");
+    @include flex(center, center);
+    height: rem(30);
+    width: rem(30);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: getColor("accent-color");
+      cursor: pointer;
+    }
+  }
+  &__icon-color {
+    fill: currentColor;
+  }
+  &__title {
+    @include font-custome(700, 20, 23, 0.03);
+    text-align: center;
+    margin-bottom: rem(30);
+  }
+  &__label {
+    @include font-custome(400, 12, 14, 0.01);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: rem(28);
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus,
+    &:focus-within {
+      color: getColor("accent-color");
+      cursor: pointer;
+    }
+  }
+  &__label-name {
+    position: absolute;
+    top: rem(-18);
+    color: getColor("pargraph-color");
+  }
+  &__input {
+    border: rem(1) solid rgba(33, 33, 33, 0.2);
+    border-radius: rem(4);
+    height: rem(40);
+    width: 100%;
+    outline: none;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus,
+    &:focus-within {
+      border: rem(1) solid getColor("accent-color");
+      cursor: pointer;
+      padding: 0 0 0 rem(40);
+    }
+  }
+  &__textarea {
+    border: rem(1) solid rgba(33, 33, 33, 0.2);
+    border-radius: rem(4);
+    padding: rem(12) rem(16);
+    @include font-custome(400, 14, 14, 0.01);
+    color: rgba(117, 117, 117, 0.5);
+    resize: none;
+    outline: none;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus,
+    &:focus-within {
+      border: rem(1) solid getColor("accent-color");
+    }
+  }
+  &__textarea-label {
+    margin-bottom: rem(20);
+  }
+  &__submit {
+    padding: rem(10) rem(80);
+    background-color: getColor("accent-color");
+    color: getColor("white-color");
+    box-shadow: rem(0) rem(4) rem(4) rgba(0, 0, 0, 0.15);
+    border-radius: rem(4);
+    @include font-custome(700, 16, 30, 0.06);
+    @include flex(center, center);
+    margin: 0 auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      background-color: getColor("button-hero-hover");
+      cursor: pointer;
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: rem(15);
+    fill: currentColor;
+    pointer-events: none;
+  }
+}
+
+.modal__agree-check {
+  @include flex(center, center);
+  margin-bottom: rem(34);
+}
+
+.modal__checkmark {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  // &:focus,
+  // &:checked:focus {
+  //   .modal__checkbox-icon {
+  //     outline: rem(2) solid getColor("primary-color");
+  //   }
+  // }
+  // &:checked {
+  //   .modal__checkbox-icon {
+  //     background-color: getColor("accent-color");
+  //     border-color: getColor("accent-color");
+  //     fill: getColor("white-color");
+  //     outline: none;
+  //   }
+  // }
+}
+
+.modal__checkbox-icon {
+  min-width: rem(16);
+  height: rem(16);
+  margin-right: rem(7);
+  fill: none;
+  border: rem(2) solid getColor("primary-color");
+  border-radius: rem(2);
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__checkmark:focus + .modal__checkbox-icon,
+.modal__checkmark:checked:focus + .modal__checkbox-icon {
+  outline: rem(2) solid getColor("primary-color");
+}
+
+.modal__checkmark:checked + .modal__checkbox-icon {
+  background-color: getColor("accent-color");
+  border-color: getColor("accent-color");
+  fill: getColor("white-color");
+  outline: none;
+}
+.modal__checkbox-terms {
+  text-decoration: underline;
+  color: getColor("accent-color");
+}
+// @media screen and (min-width: 768px) {
+//   .modal {
+//     padding: rem(0);
+//   }
+// }
+// @media screen and (min-width: 1200px) {
+//   .modal {
+//     padding: rem(0);
+//   }
+// }
