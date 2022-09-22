@@ -96,8 +96,8 @@ footer {
   box-shadow: rem(0) rem(4) rem(4) rgba(0, 0, 0, 0.15);
   border-radius: rem(4);
   color: inherit;
-  width: rem(200);
-  padding: rem(10);
+  // width: rem(200);
+  padding: rem(10) rem(28) rem(10) rem(48);
   @include flex(center, center);
   text-align: center;
   margin: 0 auto;
@@ -110,14 +110,14 @@ footer {
   }
 }
 .footer__button-icon {
-  margin-left: rem(10);
+  margin-left: rem(30);
   fill: currentColor;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer {
     flex-direction: row;
     // margin: 0 auto;
-    // justify-content: center;
+    justify-content: center;
   }
   .footer__box1 {
     margin-right: rem(165);
@@ -141,7 +141,7 @@ footer {
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     // margin: 0 auto;
   }
   .footer__box1 {
@@ -168,10 +168,11 @@ footer {
   }
   .footer__email {
     margin-bottom: rem(0);
-    padding: rem(15) rem(112) rem(15) rem(16);
+    padding: rem(15) rem(176) rem(15) rem(16);
     margin-right: rem(12);
   }
   .footer__box2-title {
     margin-bottom: rem(20);
+    text-align: start;
   }
 }

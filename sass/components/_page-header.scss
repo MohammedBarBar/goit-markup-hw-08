@@ -3,13 +3,13 @@ header {
   height: rem(60);
 }
 .header {
-  @include flex(center, space-around);
+  @include flex(center, space-between);
 
   &__nav {
     display: flex;
     align-items: center;
     //
-    padding: rem(16);
+    padding: rem(16) rem(0);
   }
 
   &__links {
@@ -23,21 +23,7 @@ header {
     transition: 0.3s;
     padding-left: rem(40);
   }
-  // &__link--current {
-  //   color: getColor("accent-color");
-  //   position: relative;
 
-  //   &::after {
-  //     content: "";
-
-  //     position: absolute;
-  //     right: 0;
-  //     bottom: rem(-1);
-  //     left: 0;
-  //     border-bottom: rem(4) solid getColor("accent-color");
-  //     border-radius: rem(2);
-  //   }
-  // }
   &__link--current::after {
     display: none;
   }
@@ -45,14 +31,6 @@ header {
     color: getColor("accent-color");
   }
   &__link {
-    // @include font-custome(500, 14, 16, 0.02);
-    // padding: rem(32) 0;
-    // transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    // &:hover,
-    // &:focus {
-    //   color: getColor("accent-color");
-    // }
-    //
     @include font-custome(500, 40, 47, 0.02);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: rem(32) 0;
@@ -149,6 +127,7 @@ header {
     background-color: white;
     align-items: flex-start;
     z-index: 10;
+    max-width: rem(767);
   }
   &.active .header__logo {
     display: none;
@@ -189,6 +168,9 @@ header {
   header {
     height: unset;
   }
+  .header {
+    justify-content: space-around;
+  }
   .header__nav {
     padding: 0;
   }
@@ -219,8 +201,6 @@ header {
   .header__our-contacts {
     //
     position: unset;
-    // left: -100%;
-    // top: rem(400);
     flex-direction: column;
     justify-content: center;
     width: unset;
@@ -263,11 +243,20 @@ header {
 }
 
 @media screen and (min-width: 1200px) {
+  .header {
+    justify-content: space-around;
+  }
   .header__info-contacts:not(:last-child) {
     margin-right: rem(30);
   }
   .header__our-contacts {
     flex-direction: row;
+  }
+  .header__info-contacts:first-child .header__info-link {
+    @include font-custome(500, 14, 16, 0.02);
+  }
+  .header__info-contacts:nth-child(2) .header__info-link {
+    @include font-custome(500, 14, 16, 0.02);
   }
   .header__info-contacts:first-child {
     .header__info-link {
